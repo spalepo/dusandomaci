@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        
+
+   <script>
+   function css(element,cssRules) { //funkcija koja ima ime:css,sa atributima:element i cssRules.Sve unutar vitičastih zagrada je telo funkcije
+    for (var stil in cssRules) {   //petlja se izvršava kroz svojstva objekta
+        var cssRules={color:"red",background:"blue"};//dodat objekat cssRules koji ima svoja svojstva
+        var osobineNiz = stil.split('');//split razdvaja stringove zarezima
+            osobina = '';
+        for (var i = 0; i < osobineNiz.length; i++) { //petlja koja ima početnu vrednost,uslov za izvršavanja i način na koji početnu vrednost povećavamo
+                                                      //lenght vraća broj elemenata niza
+            if (i == 0) {
+                osobina = osobineNiz[i];
+            } else {
+                osobina += osobineNiz[i].substr(0, 1).toUpperCase() + osobineNiz[i].substr(1);//substr izvlači delove stringa
+                                                                                              //(0,1)ispisaće samo prvo slovo
+                                                                                              //(1)izostaviće samo prvo slovo
+                                                                                              //toUpperCase ispisuje velika slova
+            }
+        }
+        element.style[osobina] = cssRules[stil];
+    }
+
+  
+}
+   
+   
+   
+   
+   
+   
+   
+   </script> 
+</body>
+</html>
